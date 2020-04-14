@@ -1,0 +1,440 @@
+html body {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#switch {
+    margin-top: 20px;
+    width: 1280px;
+    height: 570px;
+    display: flex;
+}
+
+#switch .left-joy-wrapper,
+#switch .right-joy-wrapper {
+    flex: 0 0 191px;
+    display: flex;
+    position: relative;
+    /* background-color: palevioletred; */
+}
+
+#switch .left-joy,
+#switch .right-joy {
+    flex-grow: 1;
+    position: relative;
+    z-index: 2;
+}
+
+#switch .left-joy {
+    /* background-color: #44cef6; */
+    background-image: -webkit-linear-gradient(top, rgb(2, 198, 229), rgb(2, 187, 220), rgb(2, 188, 221),rgb(1, 123, 155));
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: -1px 10px 5px rgba(2,196,227,1) inset
+    , 0 15px 5px rgba(255,255,255,.2) inset,
+    10px -10px 30px rgba(0, 0, 0, .2) inset,
+    -1px 1px 10px rgba(0, 0, 0, .5);
+
+}
+
+
+#switch .right-joy {
+    /* background-color: #ff2121; */
+    background: -webkit-linear-gradient(top, rgb(254, 100, 87), rgb(225, 91, 79), rgb(252, 83, 73), rgb(182, 37, 30));      
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: -1px 10px 5px rgb(254, 100, 86, 1) inset
+    , 0 15px 5px rgba(255,255,255,.2) inset,
+    -10px -10px 30px rgba(0, 0, 0, .2) inset,
+    -1px 1px 10px rgba(0, 0, 0, .5);
+}
+#switch .left-joy::after,
+#switch .right-joy::after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 3px;
+    height: calc(100% - 35px);
+    background-color: #000;
+}
+#switch .left-joy::after{
+    right: -3px;
+    background-image: -webkit-linear-gradient(left,rgb(29, 30, 16), rgb(72, 77, 81));
+}
+#switch .right-joy::after{
+    left: -3px;
+    background-image: -webkit-linear-gradient(right,rgb(29, 30, 16), rgb(72, 77, 81));
+}
+#switch .left-joy-top-btn,
+#switch .right-joy-top-btn {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    background-color: #3e4244;
+    top: -4px;
+    z-index: 1;
+}
+
+#switch .right-joy-top-btn {
+    right: -4px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#switch .left-joy-top-btn {
+    border-top-left-radius: 100px;
+    left: -4px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    
+}
+
+/* #switch .left-joy-wrapper{
+    background-color: #44cef6;
+}
+#switch .right-joy-wrapper{
+    background-color: #ff2121;
+} */
+#switch .main-eagin-wrapper {
+    flex-grow: 1;
+    position: relative;
+    
+}
+
+#switch .main-eagin-wrapper .content {
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - 60px);
+    height: calc(100% - 40px);
+    background-color: #303437;
+    left: 15px;
+    padding: 20px 15px;
+    display: flex;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: -1px 10px 5px rgb(78, 83, 86, 1) inset
+    , 0 15px 5px rgba(255,255,255,.2) inset,
+    -1px 1px 10px rgba(0, 0, 0, .5);
+    background: -webkit-linear-gradient(top, rgb(78, 83, 87), rgb(58, 63, 64), rgb(46, 51, 52), rgb(33, 34, 37));
+}
+
+#switch .main-eagin-wrapper .main-fill-pale {
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    width: 20px;
+    height: calc(100% - 20px);
+    background-color: #303437;
+    background: -webkit-linear-gradient(top, rgb(73, 77, 82), rgb(58, 63, 64), rgb(46, 51, 52), rgb(33, 34, 37));
+}
+
+#switch .main-eagin-wrapper .main-fill-pale:first-child {
+    left: 3px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+#switch .main-eagin-wrapper .main-fill-pale:last-child {
+    right: 3px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#switch .main-eagin-wrapper .content .screen-wraper {
+    flex-grow: 1;
+    background-color: #000000;
+    padding: 45px 70px;
+    display: flex;
+    border-radius: 10px;
+}
+
+#switch .main-eagin-wrapper .content .screen-wraper .screen {
+    flex-grow: 1;
+    background: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1) inset; 
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-image: url(./img/女子\ 水下\ 海底\ 海母\ 唯美艺术插画\ 4k动漫壁纸_彼岸图网\(1\).jpg);
+}
+
+#switch .minus-btn,
+#switch .add-btn{
+    width: 30px;
+    height: 10px;
+    position: absolute;
+    background-color: #41464d;
+    top: 48px;
+    border-radius: 2px;
+}
+#switch .right-joy .add-btn{
+    left: 15px;
+    box-shadow: 0 2px 0 rgba(255,255,255,.5) inset;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 1));
+    background-image: -webkit-linear-gradient(top,rgb(47, 55, 61) 50%, rgb(26, 31, 36));
+}
+#switch .rocker-btn{
+    width: 88px;
+    height: 88px;
+    background-color: #41464d;
+    position: absolute;
+    border-radius: 50%;
+}
+#switch .rocker-btn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #010101;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+}
+#switch .rocker-btn::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #010101;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+#switch .rocker-btn i{
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #41464d;
+    z-index: 2;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    box-shadow: 0 0 2px 2px #010101 inset,
+    0 -10px 10px rgba(255,255,255,.2) inset;
+
+}
+
+#switch .cut-btn,
+#switch .home-btn{
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    top: 395px;
+    background-color: #41464d;
+}
+#switch .cut-btn{
+    right: 40px;
+    border-radius: 5px;
+}
+#switch .home-btn{
+    left: 40px;
+    border-radius: 50%;
+    border: 5px solid rgb(143,145,145);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-image: -webkit-linear-gradient(top,rgb(60, 61, 63, 1) 50%, rgb(60, 61, 63, 1));
+    box-shadow: 1px 2px 4px rgb(0, 0, 0, .5),
+    0 0 10px rgb(0, 0, 0, 1) inset,
+    0 1px 5px 2px rgb(0, 0, 0, 1);
+}
+#switch .btn-group{
+    width: 133px;
+    height: 133px;
+    position: relative;
+    /* background-color: #41464d; */
+}
+#switch .left-joy .btn-group{
+    top: 240px;
+    left: 25px;
+}
+#switch .right-joy .btn-group{
+    top: 100px;
+    left: 25px;   
+}
+#switch .left-joy .rocker-btn{
+    top: 100px;
+    right: 45px;
+}
+#switch .right-joy .rocker-btn{
+    top: 280px;
+    left: 45px;
+}
+#switch .left-joy .minus-btn{
+    right: 15px;
+}
+#switch .right-joy .add-btn{
+    left: 15px;
+}
+#switch .add-btn::before{
+    content: '';
+    width: 10px;
+    height: 11px;
+    background-color:#41464d;
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translate(-50%);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-shadow: 0 2px 0 rgba(255,255,255,.5) inset;
+    background-image: -webkit-linear-gradient(top, rgb(26, 31, 36) 20%,rgb(47, 55, 61) 50%);
+}
+#switch .add-btn::after{
+    content: '';
+    width: 10px;
+    height: 11px;
+    background-color:#41464d;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-image: -webkit-linear-gradient(top, rgb(26, 31, 36) 50%,rgb(26, 31, 36));
+  
+}
+#switch .btn-group .group-item-btn{
+    width: 40px;
+    height: 40px;
+    background-color: #414644;
+    border-radius: 50%;
+    position: absolute;
+}
+#switch .btn-group .group-item-btn.top{
+    left: 50%;
+    transform: translateX(-50%);
+}
+#switch .btn-group .group-item-btn.bottom{
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+#switch .btn-group .group-item-btn.right{
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#switch .btn-group .group-item-btn.left{
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#switch .content .volume-btn-wrapper{
+    width: 83px;
+    height: 3px;
+    position: absolute;
+    display: flex;
+    top: -3px;
+    left: 110px;
+    z-index: 1;
+}
+#switch .content .volume-btn{
+    flex: 0 0 29px;
+    /* background-color: #41464d; */
+    background-image: -webkit-linear-gradient(top,rgb(47, 55, 61) 50%, rgb(26, 31, 36));
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}   
+#switch .content .volume-separate{
+    flex: 0 0 25px;
+    height: 2px;
+    /* background-color: #41464d; */
+    margin-top: 2px;
+    background-image: -webkit-linear-gradient(top,rgb(47, 55, 61) 50%, rgb(26, 31, 36));
+}
+
+#switch .btn-group .top::before,
+#switch .btn-group .right::before,
+#switch .btn-group .bottom::before,
+#switch .btn-group .left::before,
+#switch .cut-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, .2));
+}
+#switch .left-joy .btn-group .top::before{
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom:15px solid rgb(32,32,32);
+}
+#switch .left-joy .btn-group .right::before{
+    border-top:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-left:15px solid rgb(32,32,32);
+}
+#switch .left-joy .btn-group .bottom::before{
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:15px solid rgb(32,32,32);
+    
+}
+#switch .left-joy .btn-group .left::before{
+    border-top:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-right:15px solid rgb(32,32,32);
+}
+#switch .left-joy .cut-btn::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(32,32,32)
+}
+
+/* 右侧按键 */
+#switch .right-joy .btn-group .top::before,
+#switch .right-joy .btn-group .right::before,
+#switch .right-joy .btn-group .bottom::before,
+#switch .right-joy .btn-group .left::before{
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#switch .right-joy .btn-group .top::before{
+    content: 'X';
+}
+#switch .right-joy .btn-group .right::before{
+    content: 'A';
+}
+#switch .right-joy .btn-group .bottom::before{
+    content: 'B';
+}
+#switch .right-joy .btn-group .left::before{
+    content: 'Y';
+}
+
+/* 通用按钮 */
+#switch .btn{
+    background-image: -webkit-linear-gradient(top,rgb(47, 55, 61) 50%, rgb(26, 31, 36));
+    box-shadow: 1px 2px 4px rgba(41, 7, 7, 0.5),
+     0px 2px 0 rgba(255, 255, 255, .5) inset,
+     0px 1px 5px 2px rgba(0, 0, 0, 1);
+}
