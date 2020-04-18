@@ -4,7 +4,10 @@ html body {
     justify-content: center;
     align-items: center;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+}
 #switch {
     margin-top: 20px;
     width: 1280px;
@@ -158,12 +161,14 @@ html body {
 
 #switch .main-eagin-wrapper .content .screen-wraper .screen {
     flex-grow: 1;
-    background: white;
+    display: flex;
+    background: #34393b;
     box-shadow: 0 0 3px rgba(0, 0, 0, 1) inset; 
     background-size: contain;
     /* background-repeat: no-repeat; */
     background-position: center;
-    background-image: url(./img/女子\ 水下\ 海底\ 海母\ 唯美艺术插画\ 4k动漫壁纸_彼岸图网\(1\).jpg);
+    overflow: hidden;
+   
 }
 
 #switch .minus-btn,
@@ -252,6 +257,7 @@ html body {
     box-shadow: 1px 2px 4px rgb(0, 0, 0, .5),
     0 0 10px rgb(0, 0, 0, 1) inset,
     0 1px 5px 2px rgb(0, 0, 0, 1);
+    transition: border 1s;
 }
 #switch .btn-group{
     width: 133px;
@@ -317,23 +323,39 @@ html body {
     position: absolute;
 }
 #switch .btn-group .group-item-btn.top{
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%;
+    transform: translateX(-50%); */
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 #switch .btn-group .group-item-btn.bottom{
-    left: 50%;
+    /* left: 50%;
     bottom: 0;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 #switch .btn-group .group-item-btn.right{
-    right: 0;
+    /* right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 #switch .btn-group .group-item-btn.left{
-    left: 0;
+    /* left: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 #switch .content .volume-btn-wrapper{
@@ -350,7 +372,11 @@ html body {
     /* background-color: #41464d; */
     background-image: -webkit-linear-gradient(top,rgb(47, 55, 61) 50%, rgb(26, 31, 36));
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-}   
+} 
+#switch .content .volume-btn:active{
+    transform: translateY(1px);
+    cursor: pointer;
+}  
 #switch .content .volume-separate{
     flex: 0 0 25px;
     height: 2px;
@@ -437,4 +463,249 @@ html body {
     box-shadow: 1px 2px 4px rgba(41, 7, 7, 0.5),
      0px 2px 0 rgba(255, 255, 255, .5) inset,
      0px 1px 5px 2px rgba(0, 0, 0, 1);
+}
+
+#switch .btn:active{
+    transform: translateY(1px);
+    box-shadow: 1px 2px 4px rgba(41, 7, 7, 0.5),
+     0px 1px 5px 2px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+#switch .btn:hover{
+    cursor: pointer;
+}
+
+#switch .right-joy .add-btn:active{
+    box-shadow: none;
+    transform: translateY(1px);
+}
+#switch .right-joy .add-btn:active::before{
+    box-shadow: none;
+}
+/* 开机界面 */
+#switch .content .welcome-wrapper{
+    background-color: #d31d1a;
+    flex-grow: 1;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#switch .content .welcome-wrapper .logo-wrapper{
+    width: 160px;
+    height: 160px;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+}
+#switch .content .welcome-wrapper .brand-wrapper{
+    width: 250px;
+    height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+/* logo */
+#switch .content .welcome-wrapper .left-logo{
+    width: 48px;
+    /* height: 100%;
+    box-sizing: border-box; */
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border: 13px solid #fff;
+    position: relative;
+}
+#switch .content .welcome-wrapper .left-logo::before,
+#switch .content .welcome-wrapper .right-logo::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+}
+#switch .content .welcome-wrapper .left-logo::before{
+    background-color: #fff;
+    top: 20px;
+    left: 9px;
+}
+#switch .content .welcome-wrapper .right-logo::before{
+    background-color: #d31d1a;
+    top: 80px;
+    left: 20px;
+}
+#switch .content .welcome-wrapper .right-logo{
+    width: 61px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: #fff;
+    position: relative;
+    top: -70px;
+    transition: top .3s .3s;
+}
+#switch .content .welcome-wrapper .primary-brand{
+    flex: 0 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 20px;
+   
+}
+#switch .content .welcome-wrapper .secondary-brand{
+    flex: 0 0 40px;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 10px;
+    position: relative;
+}
+#switch .content .welcome-wrapper .secondary-brand::after{
+    content: '™';
+    position: absolute;
+    right: -15px;
+    bottom: 7px;
+    font-size: 20%;   
+}
+#switch.on .content .screen{
+    background-color: #ebebeb !important;
+}
+#switch.on .content .welcome-wrapper.bye{
+    transform: scale(2);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+
+/* jquery */
+#switch.on .home-btn{
+    border-color: white;
+    box-shadow: 0px 0px 4px rgb(255, 255, 255),
+    0 0 10px rgb(0, 0, 0, 1) inset,
+    0 1px 5px 2px rgb(0, 0, 0, 1);
+    
+}
+#switch.on .welcome-wrapper{
+    visibility: visible;
+}
+#switch.on .logo-wrapper .right-logo{
+    top: 0 !important;
+}
+#switch.on .logo-wrapper{
+    animation:welcome .3s .6 ease-in-out;
+}
+
+@keyframes welcome {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* 屏幕内容 */
+/* 主界面样式 */
+#switch .screen .inter-face-wrapper{
+    width:698px;
+    height: 440px;
+    background-color:  #ebebeb;
+    visibility: hidden;
+    position: absolute;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+}
+#switch .screen .inter-face-wrapper.show{
+    visibility: visible;
+}
+#switch .inter-face-wrapper .info-panel{
+    flex: 0 0 80px;
+    display: flex;
+    justify-content: space-between;
+}
+#switch .inter-face-wrapper .info-panel .user-info{
+    /* background-color: blue; */
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+}
+#switch .inter-face-wrapper .info-panel .user-info .user-item{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 10px;
+    overflow: hidden;
+}
+#switch  .user-info .user-item img{
+    width: 100%;
+    height: 100%;
+}
+#switch .inter-face-wrapper .info-panel .system-info{
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+#switch .inter-face-wrapper .info-panel .system-info div{
+    margin-right: 15px;
+}
+#switch .inter-face-wrapper .content-panel{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#switch .content-panel .game-panel{
+    flex-grow: 1;
+    display: flex;
+    padding-top: 67px;
+    margin-left: 70px;
+}
+#switch .content-panel .game-panel .game-item{
+    flex: 0 0 150px;
+    height: 150px;
+    padding-right: 10px;
+    display: flex;
+}
+#switch .content-panel .item-imges{
+    flex: 1;
+    border: 3px solid #f9f9f8;
+}
+#switch .content-panel .operate-panel{
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#switch .content-panel .operate-panel .operate-item{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #f9f9f8;
+    margin: 0 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#switch .content-panel .operate-panel .operate-item i.fa{
+    font-size: 25px;
+    color: #576363;
+}
+#switch .content-panel .operate-panel .operate-item:nth-child(1) i.fa{
+    color: #fe0000;
+}
+#switch .content-panel .operate-panel .operate-item:nth-child(2) i.fa{
+    color: #fda211;
+}
+#switch .content-panel .operate-panel .operate-item:nth-child(3) i.fa{
+    color: #0061fe;
+}
+#switch .inter-face-wrapper .tip-panel{
+    flex: 0 0 50px;
+    border-top: 1px solid #000;
+    margin: 0 15px;
 }
